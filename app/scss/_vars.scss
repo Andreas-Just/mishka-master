@@ -1,0 +1,41 @@
+$font: "opensans-example", "Arial", sans-serif;
+
+// ————————COLORS———————— //
+$black: #000000;
+$white: #ffffff;
+$color-main: #444444;
+// $bg-lightgrey: #f8f5f2;
+// $bg-grey: #353535;
+// $bg-darkgrey: #292929;
+// $dim-grey: #242424;
+// $bg-brown: #826550;
+// $nav-brown: #6a4d38;
+// $font-lightgrey: #f7f4f1;
+// $btn-light-bd: #e5ddd5;
+// $btn-light-bg: #d5c9bd;
+// $btn-light-clr: rgba($black, 0.3);
+// $btn-dark: rgba($white, 0.1);
+// $btn-dark-bd: #3f3f3f;
+// $btn-dark-bg: #252525;
+// $btn-dark-clr: rgba($white, 0.3);
+// —————————————————————— //
+
+// ————————WIDTHS———————— //
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1200px;
+$mobile-width-only: 767px;
+$padding-mobile: 20px;
+$padding-tablet: 64px;
+$padding-desktop: 120px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+// —————————————————————— //
+
+// Customization Bootstrap vars from "app/libs/bootstrap/scss/_variables.scss"
+$grid-gutter-width: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px);
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1140px);
+
+$gutter: $grid-gutter-width;

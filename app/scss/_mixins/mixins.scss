@@ -1,0 +1,136 @@
+@mixin no-outline() {
+  outline: none;
+  background: transparent;
+}
+
+@mixin indent($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin list-reset() {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ 
+@mixin visually-hidden() {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    white-space: nowrap;
+    border: 0;
+    clip-path: inset(100%);
+}
+
+@mixin delimiter($color) {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 35px;
+  left: 0;
+  bottom: -2px;
+  z-index: 10;
+  background-image: 
+	  linear-gradient(to top right, $color 49%, transparent 50%), 
+	  linear-gradient(to top left, $color 49%, transparent 50%);
+  background-repeat: no-repeat;
+  background-position: 0 0, 100% 0;
+  background-size: 55% 100%;
+
+  @media (min-width: $tablet-width) {
+    height: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 65px;
+  }
+}
+
+@mixin content-padding {
+  padding-left: $padding-mobile;
+  padding-right: $padding-mobile;
+
+  @media (min-width: $tablet-width) {
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
+  }
+}
+
+@mixin title-mobile($color: $black) {
+  margin: 0;
+  color: $color;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@mixin title-tablet($color: $black) {
+  margin: 0;
+  color: $color;
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+@mixin title-line($color: $black) {
+	flex-grow: 1;
+  flex-shrink: 0;
+  width: 30px;
+  height: 1px;
+  background-color: $color;
+  content: "";
+}
+
+@mixin button($color, $bd-color, $color-hover, $bd-color-hover, $color-active, $bg-color-active, $bg-color: transparent, $bg-color-hover: transparent, $bd-color-active: $bd-color-hover) {
+	display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: inherit;
+  font-weight: bold;
+  color: $color;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background-color: $bg-color;
+  border: 1px solid $bd-color;
+  cursor: pointer;
+
+  &:hover {
+  	text-decoration: none;
+    color: $color-hover;
+    background-color: $bg-color-hover;
+    border-color: $bd-color-hover;
+  }
+
+  &:active {
+    color: $color-active;
+    background-color: $bg-color-active;
+    border-color: $bd-color-active;
+  }
+}
+
+@mixin checkbox-checked {
+	background-image: url(../img/icon-checkbox-tick.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px 16px;
+}
+
