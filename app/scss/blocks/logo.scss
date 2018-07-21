@@ -1,0 +1,43 @@
+.logo--header {
+
+	img {
+	  width: 86px;
+	  height: 35px;
+	}
+
+	&[href]:hover,
+	&[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+}
+
+.logo--footer {
+  display: none;
+}
+
+@include media-breakpoint-up(md) {
+	.logo--header {
+
+		img {
+	    width: 113px;
+	    height: 46px;
+	    margin-top: 21px;
+	  }
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.logo--header {
+
+		img {
+	    width: 150px;
+	    height: 72px;
+	    margin-top: 9px;
+	    margin-bottom: 7px;
+	  }
+	}
+}

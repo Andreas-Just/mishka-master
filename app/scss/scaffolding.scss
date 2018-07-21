@@ -12,7 +12,7 @@ body {
 }
 
 body {
-  @include indent(0 auto, 0);
+  @include indent();
   min-width: 320px;
   min-height: 100vh;
   font-size: 17px;
@@ -22,6 +22,10 @@ body {
   color: $color-main;
   font-style: normal;
   background-color: $white;
+}
+
+body > div > svg {
+  display: none;
 }
 
 img {

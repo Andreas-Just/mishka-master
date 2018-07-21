@@ -7,10 +7,12 @@ var gulp          = require('gulp'),
 		cleancss      = require('gulp-clean-css'),
 		rename        = require('gulp-rename'),
 		autoprefixer  = require('gulp-autoprefixer'),
-		notify        = require("gulp-notify"),
-		svgstore      = require("gulp-svgstore"),
-		imagemin      = require("gulp-imagemin"),
-		webp          = require("gulp-webp"),
+		notify        = require('gulp-notify'),
+		svgstore      = require('gulp-svgstore'),
+		imagemin      = require('gulp-imagemin'),
+		webp          = require('gulp-webp'),
+		del           = require('del'),
+		run           = require('run-sequence'),
 		rsync         = require('gulp-rsync');
 
 gulp.task('browser-sync', function() {
@@ -46,29 +48,33 @@ gulp.task('js', function() {
 	.pipe(browserSync.reload({ stream: true }))
 });
 
-gulp.task("sprite", function () {
-  return gulp.src("img/icon-*.svg")
+gulp.task('clean', function () {
+  return del('app/img/sprite.svg');
+});
+
+gulp.task('sprite', function () {
+  return gulp.src('app/img/icon-*.svg')
     .pipe(svgstore({
       inlineSvg: true
     }))
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("app/img"));
+    .pipe(rename('sprite.svg'))
+    .pipe(gulp.dest('app/img'));
 });
 
-gulp.task("images", function () {
-  return gulp.src("app/img/**/*.{png,jpg,svg}")
+gulp.task('images', function () {
+  return gulp.src('app/img/**/*.{png,jpg,svg}')
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
       imagemin.svgo()
     ]))
-    .pipe(gulp.dest("app/img"));
+    .pipe(gulp.dest('app/img'));
 });
 
-gulp.task("webp", function () {
-  return gulp.src("app/img/**/*.{png,jpg}")
+gulp.task('webp', function () {
+  return gulp.src('app/img/**/*.{png,jpg}')
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("app/img/webp"));
+    .pipe(gulp.dest('app/img/webp'));
 });
 
 gulp.task('rsync', function() {
@@ -86,10 +92,14 @@ gulp.task('rsync', function() {
 	}))
 });
 
-gulp.task('watch', ['styles', 'js', "sprite", 'images', 'webp', 'browser-sync'], function() {
+gulp.task('sequence', function (done) {
+  run('clean', 'styles', 'js', 'images', 'webp', 'sprite', 'browser-sync', done);
+});
+
+gulp.task('watch', function() {
 	gulp.watch('app/scss/**/*.scss', ['styles']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
 	gulp.watch('app/*.html', browserSync.reload)
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['sequence', 'watch']);

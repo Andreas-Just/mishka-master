@@ -1,0 +1,40 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon--search,
+.icon--cart {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+
+  color: rgba($black, 0.2);
+}
+
+.icon--interior,
+.icon--toy {
+	color: rgba(#149080, 0.5);
+}
+
+.icon--interior {
+	margin-right: 7px;
+}
+
+.icon--toy {
+	margin-right: -3px;
+}
+
+@include media-breakpoint-up(md) {
+	.icon--search {
+		top: 37px;
+	}
+	
+  .icon--cart {
+    top: 35px;
+  }
+
+  .icon--toy {
+		margin-right: 5px;
+	}
+}

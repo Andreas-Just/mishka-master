@@ -1,0 +1,17 @@
+.page-main {
+  @include indent(0 auto, 0);
+  width: 320px;
+}
+
+@include media-breakpoint-up(md) {
+  .page-main {
+  	position: relative;
+    width: 768px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .page-main {
+    width: 1150px;
+  }
+}
