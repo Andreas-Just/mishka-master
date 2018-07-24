@@ -1,6 +1,6 @@
 .product-week {
   @include content-padding;
-  width: 100%;
+  // width: 100%;
   position: relative;
   padding-top: 28px;
   padding-bottom: 42px;
@@ -150,8 +150,8 @@
 
 @include media-breakpoint-up(xl) {
   .product-week {
-  	padding-top: 65px;
-  	padding-bottom: 95px;
+    margin: 0 50px;
+  	padding: 65px 0 95px;
 
   	&:after {
   		bottom: -12px;

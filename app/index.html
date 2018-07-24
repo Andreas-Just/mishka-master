@@ -127,41 +127,40 @@
 			</article>
 
 			<section class="features">
-				<div class="features__wrap">
-					<h2 class="features__title">Коротко о нас:</h2>
-					<ul class="features__list">
-						<li class="features__item features__item--flower">
-							<svg class="icon icon--feature-flower" width="40" height="30"></svg>
-							Экологически чистые&nbsp;материалы
-						</li>
-						<li class="features__item features__item--design">
-							<svg class="icon icon--feature-design" width="40" height="30"></svg>
-							Скандинавский стиль по&nbsp;российской цене
-						</li>
-						<li class="features__item features__item--heart">
-							<svg class="icon icon--feature-heart" width="40" height="30"></svg>
-							Увеличивает лайки на&nbsp;фотографиях
-						</li>
-						<li class="features__item features__item--clew">
-							<svg class="icon icon--feature-clew" width="40" height="30"></svg>
-							Связано вручную с любовью&nbsp;и&nbsp;умилением
-						</li>
-						<li class="features__item features__item--rocket">
-							<svg class="icon icon--feature-rocket" width="40" height="30"></svg>
-							Поддержка отечественного производителя
-						</li>
-						<li class="features__item features__item--gift">
-							<svg class="icon icon--feature-gift" width="40" height="30"></svg>
-							Поставляется в подарочной&nbsp;упаковке
-						</li>
-					</ul>
-				</div>
+				<h2 class="features__title">Коротко о нас:</h2>
+				<ul class="features__list">
+					<li class="features__item features__item--flower">
+						<svg class="icon icon--feature-flower" width="40" height="30"><use xlink:href="#icon-feature-flower"></use></svg>
+						Экологически чистые&nbsp;материалы
+					</li>
+					<li class="features__item features__item--design">
+						<svg class="icon icon--feature-design" width="40" height="30"><use xlink:href="#icon-feature-design"></use></svg>
+						Скандинавский стиль по&nbsp;российской цене
+					</li>
+					<li class="features__item features__item--heart">
+						<svg class="icon icon--feature-heart" width="40" height="30"><use xlink:href="#icon-feature-heart"></use></svg>
+						Увеличивает лайки на&nbsp;фотографиях
+					</li>
+					<li class="features__item features__item--clew">
+						<svg class="icon icon--feature-clew" width="40" height="30"><use xlink:href="#icon-feature-clew"></use></svg>
+						Связано вручную с любовью&nbsp;и&nbsp;умилением
+					</li>
+					<li class="features__item features__item--rocket">
+						<svg class="icon icon--feature-rocket" width="40" height="30"><use xlink:href="#icon-feature-rocket"></use></svg>
+						Поддержка отечественного производителя
+					</li>
+					<li class="features__item features__item--gift">
+						<svg class="icon icon--feature-gift" width="40" height="30"><use xlink:href="#icon-feature-gift"></use></svg>
+						Поставляется в подарочной&nbsp;упаковке
+					</li>
+				</ul>
 			</section>
+
 			<section class="reviews">
 				<div class="reviews__wrap">
 					<h2 class="reviews__title">Отзывы</h2>
 					<div class="reviews__slider slider">
-						<input type="radio" name="slider__toggle" id="slide-1" checked>
+						<input class="visually-hidden slider__toggle" type="radio" name="slider__toggle" id="slide-1" checked>
 						<blockquote class="reviews__item slider__item">
 							<p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
 							<cite class="reviews__author">
@@ -169,32 +168,50 @@
 								<span class="reviews__at-name">@misssssiskras</span>
 							</cite>
 							<div class="slider__pagination">
-								<label for="slide-3" class="slider__btn slider__btn--prev" aria-label="Назад">Назад</label>
-								<label for="slide-2" class="slider__btn slider__btn--next" aria-label="Вперед">Вперед</label>
+								<label for="slide-3" class="slider__btn slider__btn--prev" aria-label="Назад">
+									<svg class="icon icon--left-arrow" width="50" height="26"><use xlink:href="#icon-right-arrow"></use></svg>
+									Назад
+								</label>
+								<label for="slide-2" class="slider__btn slider__btn--next" aria-label="Вперед">
+									<svg class="icon icon--right-arrow" width="50" height="26"><use xlink:href="#icon-right-arrow"></use></svg>
+									Вперед
+								</label>
 							</div>
 						</blockquote>
-						<input type="radio" name="slider__toggle" id="slide-2">
+						<input class="visually-hidden slider__toggle" type="radio" name="slider__toggle" id="slide-2">
 						<blockquote class="reviews__item slider__item">
-							<p class="reviews__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Всеми от всех обеспечивает мир ipsum даль рот строчка текстов ты рыбными силуэт, запятой ее однажды текстами коварный речью решила предложения.</p>
+							<p class="reviews__text">Никогда не понимал букеты живых цветов в подарок. Ведь они будут стоять в вазе максимум неделю, после чего их нужно выбрасывать. Брат посоветовал этот сайт, чтобы дарить жене милые штучки. Так это же другое дело и  жена каждый раз просто в экстазе. Подарки с этого сайта ещё ни разу не подвели ;)</p>
 							<cite class="reviews__author">
 								<b class="reviews__author-name">Саня Трошин</b>
 								<span class="reviews__at-name">@alextrashen</span>
 							</cite>
 							<div class="slider__pagination">
-								<label for="slide-1" class="slider__btn slider__btn--prev" aria-label="Назад">Назад</label>
-								<label for="slide-3" class="slider__btn slider__btn--next" aria-label="Вперед">Вперед</label>
+								<label for="slide-1" class="slider__btn slider__btn--prev" aria-label="Назад">
+									<svg class="icon icon--left-arrow" width="50" height="26"><use xlink:href="#icon-right-arrow"></use></svg>
+									Назад
+								</label>
+								<label for="slide-3" class="slider__btn slider__btn--next" aria-label="Вперед">
+									<svg class="icon icon--right-arrow" width="50" height="26"><use xlink:href="#icon-right-arrow"></use></svg>
+									Вперед
+								</label>
 							</div>
 						</blockquote>
-						<input type="radio" name="slider__toggle" id="slide-3">
+						<input class="visually-hidden slider__toggle" type="radio" name="slider__toggle" id="slide-3">
 						<blockquote class="reviews__item slider__item">
-							<p class="reviews__text">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Обеспечивает правилами даль ему не, снова вершину прямо. Единственное свой власти, точках даже букв предупредила пояс грамматики которой текста если?</p>
+							<p class="reviews__text">Удивительные и милейшие игрушки! Своей красотой они покорят сердца даже самых капризных девушек! Букет из игрушек это отличный подарок. Теперь Вы можете смело шагать к девушке с букетом даже в очень холодные вечера. Ведь игрушкам не страшен мороз, не стоит переживать, что они завянут без воды, и самое главное они будут радовать глаза далеко не один месяц! А если разобрать букет, то получите набор маленьких мягких игрушек, которыми с удовольствием будут играть дети.</p>
 							<cite class="reviews__author">
 								<b class="reviews__author-name">Елизавета Сюняева</b>
 								<span class="reviews__at-name">@lizzapupsik</span>
 							</cite>
 							<div class="slider__pagination">
-								<label for="slide-2" class="slider__btn slider__btn--prev" aria-label="Назад">Назад</label>
-								<label for="slide-1" class="slider__btn slider__btn--next" aria-label="Вперед">Вперед</label>
+								<label for="slide-2" class="slider__btn slider__btn--prev" aria-label="Назад">
+									<svg class="icon icon--left-arrow" width="50" height="26"><use xlink:href="#icon-right-arrow"></use></svg>
+									Назад
+								</label>
+								<label for="slide-1" class="slider__btn slider__btn--next" aria-label="Вперед">
+									<svg class="icon icon--right-arrow" width="50" height="26"><use xlink:href="#icon-right-arrow"></use></svg>
+									Вперед
+								</label>
 							</div>
 						</blockquote>
 					</div>

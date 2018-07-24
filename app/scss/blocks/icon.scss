@@ -25,6 +25,49 @@
 	margin-right: -3px;
 }
 
+.icon--feature-flower,
+.icon--feature-design,
+.icon--feature-heart,
+.icon--feature-clew,
+.icon--feature-rocket,
+.icon--feature-gift {
+	display: block;
+	color: $green;
+}
+
+.icon--feature-flower {
+  margin-bottom: 18px;
+  margin-left: 8px;
+}
+
+.icon--feature-design {
+  margin-bottom: 26px;
+}
+
+.icon--feature-heart {
+  margin-bottom: 26px;
+  margin-left: 7px;
+}
+
+.icon--feature-clew {
+  margin-bottom: 18px;
+  margin-left: 2px;
+}
+
+.icon--feature-rocket {
+  margin-bottom: 30px;
+  margin-left: -5px;
+}
+
+.icon--feature-gift {
+  margin-bottom: 24px;
+  margin-left: 3px;
+}
+
+.icon--left-arrow {
+	transform: rotate(180deg);
+}
+
 @include media-breakpoint-up(md) {
 	.icon--search {
 		top: 37px;
