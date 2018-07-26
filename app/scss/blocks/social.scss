@@ -1,0 +1,22 @@
+.social {
+	@include list-reset;
+	display: flex;
+	justify-content: space-between;
+  align-items: center;
+  margin: 0 61px 27px 57px;
+}
+
+.social__link {
+	min-width: 25px;
+  font-size: 0;
+  line-height: 0;
+}
+
+@include media-breakpoint-up(md) {
+	.social {
+		@include indent;
+		width: 142px;
+		margin-right: auto;
+		border: none;
+	}
+}

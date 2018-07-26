@@ -1,0 +1,30 @@
+.page-footer {
+	@include indent(0 auto, 25px 0);
+  width: 320px;
+	background-color: #f1f1f1;
+}
+
+.page-footer__wrap {
+	@include content-padding;
+}
+
+@include media-breakpoint-up(md) {
+  .page-footer {
+  	position: relative;
+    width: 768px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+
+  .page-footer__wrap {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+  .page-footer {
+    width: 1150px;
+  }
+}

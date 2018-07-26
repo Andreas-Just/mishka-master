@@ -41,26 +41,26 @@
 						</a>
 					</li>
 					<li class="main-nav__item main-nav__item--catalog">
-						<a class="main-nav__link" href="#">Каталог товаров</a>
+						<a class="main-nav__link" href="catalog.html">Каталог товаров</a>
 					</li>
 					<li class="main-nav__item main-nav__item--form">
-						<a class="main-nav__link" href="#">Вязание на заказ</a>
+						<a class="main-nav__link" href="form.html">Вязание на заказ</a>
 					</li>
 					<li class="main-nav__item main-nav__item--search">
-						<a class="main-nav__link" href="#">
+						<a class="main-nav__link" href="search.html">
 							<svg class="icon icon--search" width="19" height="18"><use xlink:href="#icon-search"></use></use></svg>Поиск по сайту
 						</a>
 					</li>
 					<li class="main-nav__item main-nav__item--cart">
-						<a class="main-nav__link" href="#">
+						<a class="main-nav__link" href="basket.html">
 							<svg class="icon icon--cart" width="20" height="19"><use xlink:href="#icon-cart"></use></use></svg>Корзина: пока пуста
 						</a>
 					</li>
 					<li class="main-nav__item main-nav__item--add">
-						<a class="main-nav__link" href="#">Новые поступления</a>
+						<a class="main-nav__link" href="new-arrivals.html">Новые поступления</a>
 					</li>
 					<li class="main-nav__item main-nav__item--add main-nav__item--sale">
-						<a class="main-nav__link main-nav__link-add" href="#">Распродажа</a>
+						<a class="main-nav__link main-nav__link-add" href="sale.html">Распродажа</a>
 					</li>
 				</ul>
 			</nav>
@@ -215,7 +215,7 @@
 							</div>
 						</blockquote>
 					</div>
-					<a class="btn reviews__btn" href="#">Написать</a>
+					<a class="btn reviews__btn" href="reviews.html">Написать</a>
 				</div>
 			</section>
 
@@ -223,28 +223,28 @@
 				<div class="contacts__wrap">
 					<div class="contacts__header">
 						<h2 class="contacts__title">Контакты</h2>
-						<svg class="icon icon--contacts-flag" width="47" height="81"></svg>
+						<svg class="icon icon--flag" width="47" height="81"><use xlink:href="#icon-flag"></use></svg>
 					</div>
-					<div class="contacts__content">
+					<div class="contacts__content contacts__content--email">
 						<span class="contacts__label">e-mail:</span>
 						<a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
 					</div>
-					<div class="contacts__content">
+					<div class="contacts__content contacts__content--address">
 						<span class="contacts__label">адрес:</span>
 						<p class="contacts__address">г. Санкт-Петербург, ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8,&nbsp;офис&nbsp;101</p>
 					</div>
 				</div>
 				<div class="contacts__map">
-					<iframe src="" frameborder="0" allowfullscreen=""></iframe>
+					<!-- <iframe class="contacts__map-iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1998.599104370521!2d30.32088925141702!3d59.93879418178727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1508593919269" frameborder="0" allowfullscreen></iframe> -->
 					<picture>
-						<source type="image/webp">
-						<source type="image/webp">
-						<source type="image/webp">
-						<source type="image/webp">
-						<source type="image/webp">
-						<img src="" alt="г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8, офис 101" class="contacts__map-img">
+						<source type="image/webp" media="(min-width: 1150px)" srcset="img/webp/map-desktop@1x.webp 1x, img/webp/map-desktop@2x.webp 2x, img/webp/map-desktop@3x.webp 3x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/webp/map-tablet@1x.webp 1x, img/webp/map-tablet@2x.webp 2x, img/webp/map-tablet@3x.webp 3x">
+            <source type="image/webp" srcset="img/webp/map-mobile@1x.webp 1x, img/webp/map-mobile@2x.webp 2x, img/webp/map-mobile@3x.webp 3x">
+						<source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x, img/map-desktop@3x.jpg 3x">
+						<source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x, img/map-tablet@3x.jpg 3x">
+						<img class="contacts__map-img" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x, img/map-mobile@3x.jpg 3x" alt="г.Санкт-Петербург, ул.Большая Конюшенная, д.19/8, офис 101">
 					</picture>
-					<svg class="contacts__map-point" width="67" height="100"></svg>
+					<svg class="contacts__map-point" width="67" height="100"><use xlink:href="#icon-map-point"></use></svg>
 				</div>
 				<a class="btn contacts__btn" href="write-us.html">Напишите нам</a>
 			</section>
@@ -253,34 +253,33 @@
 		<footer class="page-footer">
 			<div class="page-footer__wrap">
 				<a class="logo logo--footer">
-					<svg class="icon icon--logo-footer" width="102" height="34"></svg>
+					<svg class="icon icon--logo-footer" width="102" height="34"><use xlink:href="#icon-logo-footer"></use></svg>
 				</a>
-				<div class="page-footer__social social">
-					<ul class="social__list">
-						<li class="social__item">
-							<a class="social__link social__link--instagram" href="#" target="_blank" aria-label="Инстаграм">
-								<svg class="icon icon--footer-instagram" width="20" height="20"></svg>
-								Мы в Инстаграме
-							</a>
-						</li>
-						<li class="social__item">
-							<a class="social__link social__link--facebook" href="#" target="_blank" aria-label="Фейсбук">
-								<svg class="icon icon--footer-facebook" width="20" height="20"></svg>
-								Мы в Фейсбуке
-							</a>
-						</li>
-						<li class="social__item">
-							<a class="social__link social__link--twitter" href="#" target="_blank" aria-label="Твиттер">
-								<svg class="icon icon--footer-twitter" width="20" height="20"></svg>
-								Мы в Твиттере
-							</a>
-						</li>
-					</ul>
-				</div>
+				<ul class="page-footer__social social">
+					<li class="social__item">
+						<a class="social__link social__link--instagram" href="https://www.instagram.com/andreas_just_" target="_blank" aria-label="Перейти на мою страницу «Инстаграм»">
+							<svg class="icon icon--footer-instagram" width="22" height="21"><use xlink:href="#icon-instagram"></use></svg>
+							Мы в Инстаграме
+						</a>
+					</li>
+					<li class="social__item">
+						<a class="social__link social__link--facebook" href="https://www.facebook.com/Just.Andreas" target="_blank" aria-label="Перейти на мою страницу «Фейсбук»">
+							<svg class="icon icon--footer-facebook" width="15" height="29"><use xlink:href="#icon-facebook"></use></svg>
+							Мы в Фейсбуке
+						</a>
+					</li>
+					<li class="social__item">
+						<a class="social__link social__link--twitter" href="https://twitter.com/AndreasJust3" target="_blank" aria-label="Перейти на мою страницу «Твиттер»">
+							<svg class="icon icon--footer-twitter" width="24" height="20"><use xlink:href="#icon-twitter"></use></svg>
+							Мы в Твиттере
+						</a>
+					</li>
+				</ul>
 				<div class="page-footer__copyright copyright">
-					<a class="copyright__link" href="#">
-						<svg class="icon icon--andreas-just" width="200" height="50"></svg>
-						Andreas Just
+					<b class="copyright__text">Воплощено</b>
+					<a class="copyright__link" href="https://github.com/Andreas-Just" target="_blank" aria-label="Переход на профиль Andreas Just в GitHub">
+						<svg class="icon icon--just-andreas" width="140" height="25"><use xlink:href="#icon-just–andreas"></use></svg>
+						Andreas&nbsp;&nbsp;Just
 					</a>
 				</div>
 			</div>
@@ -289,15 +288,15 @@
 		<div class="overlay"></div>
 
 		<div class="modal">
-			<h2 class="modal__title">Добавить в корзину</h2>
+			<h2 class="modal__title">Добавить в&nbsp;корзину</h2>
 			<form class="modal__form" method="post" action="http://echo.htmlacademy.ru/">
 				<p class="modal__caption">Выберите размер:</p>
 				<div class="modal__inner">
-					<input class="modal__input" type="radio" id="size-s" name="size" value="s" checked>
+					<input class="modal__input visually-hidden" type="radio" id="size-s" name="size" value="s" checked>
 					<label class="modal__label" for="size-s">s</label>
-					<input class="modal__input" type="radio" id="size-m" name="size" value="m">
+					<input class="modal__input visually-hidden" type="radio" id="size-m" name="size" value="m">
 					<label class="modal__label" for="size-m">m</label>
-					<input class="modal__input" type="radio" id="size-l" name="size" value="l">
+					<input class="modal__input visually-hidden" type="radio" id="size-l" name="size" value="l">
 					<label class="modal__label" for="size-l">l</label>
 				</div>
 				<button class="btn modal__btn" type="submit">Добавить</button>

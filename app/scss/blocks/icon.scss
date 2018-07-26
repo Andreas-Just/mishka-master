@@ -68,6 +68,28 @@
 	transform: rotate(180deg);
 }
 
+.icon--flag {
+	display: none;
+}
+
+.icon--footer-instagram,
+.icon--footer-facebook,
+.icon--footer-twitter {
+	color: $black;
+
+	&:hover {
+		color: #46c1ae;
+	}
+
+	&:active {
+		color: rgba(#46c1ae, 0.3);
+	}
+}
+
+.icon--just-andreas {
+	color: $green;
+}
+
 @include media-breakpoint-up(md) {
 	.icon--search {
 		top: 37px;
@@ -79,5 +101,21 @@
 
   .icon--toy {
 		margin-right: 5px;
+	}
+
+	.icon--flag {
+		display: block;
+		margin-top: -16px;
+	}
+
+	.icon--just-andreas {
+		width: 178px;
+		height: 30px;
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.icon--flag {
+		order: -1
 	}
 }

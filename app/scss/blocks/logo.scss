@@ -5,8 +5,7 @@
 	  height: 35px;
 	}
 
-	&[href]:hover,
-	&[href]:focus {
+	&[href]:hover {
     opacity: 0.6;
   }
 
@@ -28,6 +27,20 @@
 	    margin-top: 21px;
 	  }
 	}
+
+	.logo--footer {
+	  display: block;
+	  margin-right: 160px;
+	  color: $black;
+
+	  &[href]:hover {
+	    color: #46c1ae;
+	  }
+
+	  &[href]:active {
+	    color: rgba(#46c1ae, 0.3);
+	  }
+	}
 }
 
 @include media-breakpoint-up(xl) {
@@ -39,5 +52,9 @@
 	    margin-top: 9px;
 	    margin-bottom: 7px;
 	  }
+	}
+
+	.logo--footer {
+		margin-right: 352px;
 	}
 }

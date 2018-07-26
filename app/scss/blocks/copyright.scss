@@ -1,0 +1,34 @@
+.copyright {
+	text-align: center;
+	padding-top: 22px;
+
+	border-top: 1px solid #e5e5e5;
+
+	&:hover .icon {
+		color: #46c1ae;
+	}
+
+	&:active {
+		opacity: 0.3;
+	}
+}
+
+.copyright__text {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 19px;
+	line-height: 1;
+}
+
+.copyright__link {
+	display: block;
+	font-size: 0;
+  line-height: 0;
+}
+
+@include media-breakpoint-up(md) {
+	.copyright {
+		@include indent;
+		border: none;
+	}
+}

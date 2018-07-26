@@ -33,34 +33,38 @@
 				<ul class="main-nav__list">
 					<li class="main-nav__item main-nav__item--logo">
 						<a class="logo logo--header" href="index.html">
-							<picture></picture>
+							<picture>
+								<source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+							</picture>
 						</a>
 					</li>
 					<li class="main-nav__item main-nav__item--catalog">
-						<a href="#">Каталог товаров</a>
+						<a class="main-nav__link" href="catalog.html">Каталог товаров</a>
 					</li>
 					<li class="main-nav__item main-nav__item--form">
-						<a href="#">Вязание на заказ</a>
+						<a class="main-nav__link">Вязание на заказ</a>
 					</li>
 					<li class="main-nav__item main-nav__item--search">
-						<a href="#">
-							<svg class="icon icon--search" width="19" height="18"></svg>Поиск по сайту
+						<a class="main-nav__link" href="search.html">
+							<svg class="icon icon--search" width="19" height="18"><use xlink:href="#icon-search"></use></use></svg>Поиск по сайту
 						</a>
 					</li>
 					<li class="main-nav__item main-nav__item--cart">
-						<a href="#">
-							<svg class="icon icon--cart" width="20" height="19"></svg>Корзина: пока пуста
+						<a class="main-nav__link" href="basket.html">
+							<svg class="icon icon--cart" width="20" height="19"><use xlink:href="#icon-cart"></use></use></svg>Корзина: пока пуста
 						</a>
 					</li>
 					<li class="main-nav__item main-nav__item--add">
-						<a href="#">Новые поступления</a>
+						<a class="main-nav__link" href="new-arrivals.html">Новые поступления</a>
 					</li>
-					<li class="main-nav__item main-nav__item--add">
-						<a href="#">Распродажа</a>
+					<li class="main-nav__item main-nav__item--add main-nav__item--sale">
+						<a class="main-nav__link main-nav__link-add" href="sale.html">Распродажа</a>
 					</li>
 				</ul>
 			</nav>
-			<div class="page-header__intro">
+			<div class="page-header__intro page-header__intro--large">
 				<p class="page-header__info">Бесплатная доставка по России</p>
 				<h1 class="page-header__title">Вязание на заказ</h1>
 			</div>
@@ -171,38 +175,39 @@
 		<footer class="page-footer">
 			<div class="page-footer__wrap">
 				<a class="logo logo--footer" href="index.html">
-					<svg class="icon icon--logo-footer" width="102" height="34"></svg>
+					<svg class="icon icon--logo-footer" width="102" height="34"><use xlink:href="#icon-logo-footer"></use></svg>
 				</a>
-				<div class="page-footer__social social">
-					<ul class="social__list">
-						<li class="social__item">
-							<a class="social__link social__link--instagram" href="#" target="_blank" aria-label="Инстаграм">
-								<svg class="icon icon--footer-instagram" width="20" height="20"></svg>
-								Мы в Инстаграме
-							</a>
-						</li>
-						<li class="social__item">
-							<a class="social__link social__link--facebook" href="#" target="_blank" aria-label="Фейсбук">
-								<svg class="icon icon--footer-facebook" width="20" height="20"></svg>
-								Мы в Фейсбуке
-							</a>
-						</li>
-						<li class="social__item">
-							<a class="social__link social__link--twitter" href="#" target="_blank" aria-label="Твиттер">
-								<svg class="icon icon--footer-twitter" width="20" height="20"></svg>
-								Мы в Твиттере
-							</a>
-						</li>
-					</ul>
-				</div>
+				<ul class="page-footer__social social">
+					<li class="social__item">
+						<a class="social__link social__link--instagram" href="https://www.instagram.com/andreas_just_" target="_blank" aria-label="Перейти на мою страницу «Инстаграм»">
+							<svg class="icon icon--footer-instagram" width="22" height="21"><use xlink:href="#icon-instagram"></use></svg>
+							Мы в Инстаграме
+						</a>
+					</li>
+					<li class="social__item">
+						<a class="social__link social__link--facebook" href="https://www.facebook.com/Just.Andreas" target="_blank" aria-label="Перейти на мою страницу «Фейсбук»">
+							<svg class="icon icon--footer-facebook" width="15" height="29"><use xlink:href="#icon-facebook"></use></svg>
+							Мы в Фейсбуке
+						</a>
+					</li>
+					<li class="social__item">
+						<a class="social__link social__link--twitter" href="https://twitter.com/AndreasJust3" target="_blank" aria-label="Перейти на мою страницу «Твиттер»">
+							<svg class="icon icon--footer-twitter" width="24" height="20"><use xlink:href="#icon-twitter"></use></svg>
+							Мы в Твиттере
+						</a>
+					</li>
+				</ul>
 				<div class="page-footer__copyright copyright">
-					<a class="copyright__link" href="#">
-						<svg class="icon icon--andreas-just" width="200" height="50"></svg>
-						Andreas Just
+					<b class="copyright__text">Воплощено</b>
+					<a class="copyright__link" href="https://github.com/Andreas-Just" target="_blank" aria-label="Переход на профиль Andreas Just в GitHub">
+						<svg class="icon icon--just-andreas" width="140" height="25"><use xlink:href="#icon-just–andreas"></use></svg>
+						Andreas&nbsp;&nbsp;Just
 					</a>
 				</div>
 			</div>
 		</footer>
+
+    <script src="js/scripts.min.js"></script>
 
 	</body>
 </html>
