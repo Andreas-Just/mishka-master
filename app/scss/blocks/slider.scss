@@ -1,79 +1,94 @@
 @keyframes opacity {
-  0% {
-  	transform: scale(0.001);
-  	opacity: 0;
-  }
+    0% {
+        opacity: 0;
 
-  100% {
-  	transform: scale(1);
-  	opacity: 1;
-  }
+        transform: scale(0.001);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform: scale(1);
+    }
 }
 
 .slider__toggle:checked + .slider__item {
-	display: block;
-	animation: 	opacity 600ms ease-in-out;
-	animation-fill-mode: forwards;
-	opacity: 0;
+    display: block;
+
+    opacity: 0;
+
+    animation: opacity 600ms ease-in-out;
+
+    animation-fill-mode: forwards;
 }
 
 .slider__item {
-	@include indent;
-	display: none;
+    @include indent;
+
+    display: none;
 }
 
 .slider__pagination {
-	display: flex;
+    display: flex;
 }
 
 .slider__btn {
-	@include indent;
-	position: relative;
-  width: 130px;
-  height: 51px;
+    @include indent;
 
-	border: $bd-line;
-  background-color: $white;
-  font-size: 0;
-  cursor: pointer;
-  outline: none;
+    position: relative;
 
-  &--prev {
-  	border-right: none;
-  }
+    width: 130px;
+    height: 51px;
 
-  .icon {
-  	position: absolute;
-  	top: 50%;
-  	left: 50%;
-  	margin-top: -13px;
-  	margin-left: -25px;
-  }
+    font-size: 0;
 
-  &:hover {
-		color: $white;
-		background-color: $color-main;
-  }
+    border: $bd-line;
+    outline: none;
+    background-color: $white;
 
-  &:active {
-		color: $white;
-		background-color: rgba($color-main, 0.6);
-  }
+    cursor: pointer;
+
+    &--prev {
+        border-right: none;
+    }
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        margin-top: -13px;
+        margin-left: -25px;
+    }
+
+    &:hover,
+    &:focus {
+        color: $white;
+
+        background-color: $color-main;
+    }
+
+    &:active {
+        color: $white;
+
+        background-color: rgba($color-main, 0.6);
+    }
 }
 
 @include media-breakpoint-up(md) {
-	.slider {
-		position: relative;
-	}
+    .slider {
+        position: relative;
+    }
 
-	.slider__pagination {
-		position: absolute;
-		bottom: 4px;
-		right: 0;
-	}
+    .slider__pagination {
+        position: absolute;
+        right: 0;
+        bottom: 4px;
+    }
 
-	.slider__btn {
-		width: 88px;
-		border: none;
-	}
+    .slider__btn {
+        width: 88px;
+
+        border: none;
+    }
 }

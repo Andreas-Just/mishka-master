@@ -1,0 +1,244 @@
+.catalog {
+    @include content-padding;
+
+    padding-top: 30px;
+}
+
+.catalog-item {
+    margin-bottom: 30px;
+
+    outline: none;
+}
+
+.catalog-item__image {
+    @include indent;
+
+    display: block;
+    min-height: 195px;
+
+    outline: none;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    &:hover + .catalog-item__spec,
+    &:focus + .catalog-item__spec {
+        box-shadow: 0 6px 10px rgba($black, 0.1);
+    }
+
+    &:active + .catalog-item__spec {
+        box-shadow: 0 3px 5px rgba($black, 0.1);
+    }
+}
+
+.catalog-item__spec {
+    @include indent(0, 28px);
+
+    border: $bd-line;
+
+    &:focus-within {
+        box-shadow: 0 6px 10px rgba($black, 0.1);
+    }
+
+    &:hover {
+        box-shadow: 0 6px 10px rgba($black, 0.1);
+    }
+
+    &:active {
+        box-shadow: 0 3px 5px rgba($black, 0.1);
+    }
+}
+
+.catalog-item__name {
+    padding-bottom: 20px;
+}
+
+.catalog-item__link {
+    color: $black;
+    text-decoration: none;
+
+    outline: none;
+
+    &:hover,
+    &:focus {
+        color: $black-hover;
+        text-decoration: none;
+    }
+
+    &:active {
+        color: $black-active;
+    }
+}
+
+.catalog-item__title {
+    margin-bottom: 7px;
+
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.catalog-item__description {
+    @include indent;
+
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 30px;
+}
+
+.catalog-item__booking {
+    @include indent;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 22px;
+
+    border-top: $bd-line;
+}
+
+.catalog-item__price {
+    font-size: 15px;
+    line-height: 24px;
+    color: $black;
+}
+
+.catalog-item__btn {
+    display: block;
+    width: 21px;
+    height: 19px;
+
+    font-size: 0;
+
+    outline: none;
+
+    cursor: pointer;
+
+    &:hover .icon--catalog-cart,
+    &:focus .icon--catalog-cart {
+        color: $green;
+    }
+
+    &:active .icon--catalog-cart {
+        color: rgba($green, 0.3);
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .catalog {
+        padding-top: 75px;
+    }
+
+    .catalog-item {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 55px;
+    }
+
+    .catalog-item__image {
+        width: 334px;
+        min-height: 334px;
+
+        &:hover + .catalog-item__spec,
+        &:focus + .catalog-item__spec {
+            box-shadow: 6px 0 10px rgba($black, 0.1);
+        }
+
+        &:active + .catalog-item__spec {
+            box-shadow: 3px 0 5px rgba($black, 0.1);
+        }
+    }
+
+    .catalog-item__spec {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 334px;
+        padding: 26px 28px;
+
+        &:focus-within {
+            box-shadow: 6px 0 10px rgba($black, 0.1);
+        }
+
+        &:hover {
+            box-shadow: 6px 0 10px rgba($black, 0.1);
+        }
+
+        &:active {
+            box-shadow: 3px 0 5px rgba($black, 0.1);
+        }
+    }
+
+    .catalog-item__title {
+        font-size: 20px;
+    }
+
+    .catalog-item__description {
+        font-size: 15px;
+    }
+
+    .catalog-item__booking {
+        margin: 0 5px;
+    }
+
+    .catalog-item__price {
+        font-size: 17px;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .catalog {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-wrap: wrap;
+        padding-top: 125px;
+    }
+
+    .catalog-item {
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-right: 51px;
+
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+    }
+
+    .catalog-item__image {
+        width: 316px;
+        min-height: 462px;
+
+        &:hover + .catalog-item__spec,
+        &:focus + .catalog-item__spec {
+            box-shadow: 0 6px 10px rgba($black, 0.1);
+        }
+
+        &:active + .catalog-item__spec {
+            box-shadow: 0 3px 5px rgba($black, 0.1);
+        }
+    }
+
+    .catalog-item__spec {
+        flex-grow: 1;
+        width: 316px;
+
+        &:focus-within {
+            box-shadow: 0 6px 10px rgba($black, 0.1);
+        }
+
+        &:hover {
+            box-shadow: 0 6px 10px rgba($black, 0.1);
+        }
+
+        &:active {
+            box-shadow: 0 3px 5px rgba($black, 0.1);
+        }
+    }
+
+    .catalog-item__booking {
+        margin: 0;
+    }
+}

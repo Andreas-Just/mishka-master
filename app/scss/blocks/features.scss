@@ -1,78 +1,82 @@
 .features {
-  @include content-padding;
-  padding-top: 28px;
-  padding-bottom: 57px;
+    @include content-padding;
+
+    padding-top: 28px;
+    padding-bottom: 57px;
 }
 
 .features__title {
-	@include title;
+    @include title;
 }
 
 .features__list {
-	@include list-reset;
+    @include list-reset;
 }
 
 .features__item {
-	margin-top: 32px;
-	line-height: 20px;
-	font-weight: bold;
-	color: $black;
+    margin-top: 32px;
+
+    font-weight: bold;
+    line-height: 20px;
+    color: $black;
 }
 
 @include media-breakpoint-up(md) {
-	.features {
-	  padding-top: 50px;
-	  padding-bottom: 76px;
-	}
+    .features {
+        padding-top: 50px;
+        padding-bottom: 76px;
+    }
 
-  .features__list {
-  	display: flex;
-  	flex-wrap: wrap;
-  	align-items: baseline;
-  }
+    .features__list {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+    }
 
-  .features__item {
-  	width: 334px;
-  	margin-top: 55px;
-  	padding-right: 30px;
-  	font-size: 20px;
-  	line-height: 22px;
+    .features__item {
+        width: 334px;
+        margin-top: 55px;
+        padding-right: 30px;
 
-	  &--design {
-	    order: 1;
-	  }
+        font-size: 20px;
+        line-height: 22px;
 
-	  &--rocket {
-	    order: 2;
-	    width: 50%;
-	    padding-right: 0;
-	  }
+        &--design {
+            order: 1;
+        }
 
-	  &--heart {
-	    order: 3;
-	  }
+        &--rocket {
+            width: 50%;
+            padding-right: 0;
 
-	  &--gift {
-	    order: 4;
-	  }
-  }
+            order: 2;
+        }
+
+        &--heart {
+            order: 3;
+        }
+
+        &--gift {
+            order: 4;
+        }
+    }
 }
 
 @include media-breakpoint-up(xl) {
-	.features {
-	  padding-top: 60px;
-	  padding-bottom: 83px;
-	}
+    .features {
+        padding-top: 60px;
+        padding-bottom: 83px;
+    }
 
-	.features__title {
-		margin-left: 175px;
-	}
+    .features__title {
+        margin-left: 175px;
+    }
 
-	.features__list {
-  	margin: 0 175px;
-  }
+    .features__list {
+        margin: 0 175px;
+    }
 
-  .features__item {
-    width: 350px;
-  }
+    .features__item {
+        width: 350px;
+    }
 }

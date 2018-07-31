@@ -52,7 +52,7 @@ $(function() {
 	    modal.classList.remove("modal--show");
 	    overlay.classList.remove("overlay--show");
 	  }
-	});	
+	});
 
 });
 

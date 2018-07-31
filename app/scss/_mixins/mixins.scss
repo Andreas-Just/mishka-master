@@ -1,106 +1,66 @@
 @mixin no-outline {
-  outline: none;
-  background: transparent;
+    outline: none;
+    background: transparent;
 }
 
 @mixin indent($margin: 0, $padding: 0) {
-  margin: $margin;
-  padding: $padding;
+    margin: $margin;
+    padding: $padding;
 }
 
 @mixin list-reset {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
 }
- 
+
 @mixin visually-hidden {
     position: absolute;
+
     overflow: hidden;
     clip: rect(0 0 0 0);
-
     width: 1px;
     height: 1px;
     margin: -1px;
     padding: 0;
 
     white-space: nowrap;
+
     border: 0;
+
     clip-path: inset(100%);
 }
 
-// @mixin delimiter($color) {
-//   content: "";
-//   position: absolute;
-//   width: 100%;
-//   height: 35px;
-//   left: 0;
-//   bottom: -2px;
-//   z-index: 10;
-//   background-image: 
-// 	  linear-gradient(to top right, $color 49%, transparent 50%), 
-// 	  linear-gradient(to top left, $color 49%, transparent 50%);
-//   background-repeat: no-repeat;
-//   background-position: 0 0, 100% 0;
-//   background-size: 55% 100%;
-
-//   @media (min-width: $tablet-width) {
-//     height: 40px;
-//   }
-
-//   @media (min-width: $desktop-width) {
-//     height: 65px;
-//   }
-// }
-
 @mixin content-padding {
-  padding-left: $padding-mobile;
-  padding-right: $padding-mobile;
+    padding-right: $padding-mobile;
+    padding-left: $padding-mobile;
 
-  @include media-breakpoint-up(md) {
-    padding-left: $padding-tablet;
-    padding-right: $padding-tablet;
-  }
-
-  @include media-breakpoint-up(xl) {
-    padding-left: $padding-desktop;
-    padding-right: $padding-desktop;
-  }
+    @include media-breakpoint-up(md) {
+        padding-right: $padding-tablet;
+        padding-left: $padding-tablet;
+    }
+    @include media-breakpoint-up(xl) {
+        padding-right: $padding-desktop;
+        padding-left: $padding-desktop;
+    }
 }
 
 @mixin title($fz-mobile: 25px, $lh-mobile: 30px) {
-  margin: 0;
-  color: $black;
-  font-size: $fz-mobile;
-  line-height: $lh-mobile;
-  font-weight: bold;
-  text-align: left;
+    margin: 0;
 
-  @include media-breakpoint-up(md) {
-    font-size: 43px;
-    line-height: 50px;
-  }
+    font-size: $fz-mobile;
+    font-weight: bold;
+    line-height: $lh-mobile;
+    color: $black;
+    text-align: left;
 
-  @include media-breakpoint-up(xl) {
-    font-size: 53px;
-    line-height: 57px;
-  }
+    @include media-breakpoint-up(md) {
+        font-size: 43px;
+        line-height: 50px;
+    }
+    @include media-breakpoint-up(xl) {
+        font-size: 53px;
+        line-height: 57px;
+    }
 }
-
-// @mixin title-line($color: $black) {
-// 	flex-grow: 1;
-//   flex-shrink: 0;
-//   width: 30px;
-//   height: 1px;
-//   background-color: $color;
-//   content: "";
-// }
-
-
-// @mixin checkbox-checked {
-// 	background-image: url(../img/icon-checkbox-tick.svg);
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: 22px 16px;
-// }
-

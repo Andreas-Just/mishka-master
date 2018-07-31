@@ -1,22 +1,33 @@
 .social {
-	@include list-reset;
-	display: flex;
-	justify-content: space-between;
-  align-items: center;
-  margin: 0 61px 27px 57px;
+    @include list-reset;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 61px 27px 57px;
 }
 
 .social__link {
-	min-width: 25px;
-  font-size: 0;
-  line-height: 0;
+    min-width: 25px;
+
+    font-size: 0;
+    line-height: 0;
+    outline: none;
+
+    &:focus .icon--footer-instagram,
+    &:focus .icon--footer-facebook,
+    &:focus .icon--footer-twitter {
+        color: #46c1ae;
+    }
 }
 
 @include media-breakpoint-up(md) {
-	.social {
-		@include indent;
-		width: 142px;
-		margin-right: auto;
-		border: none;
-	}
+    .social {
+        @include indent;
+
+        width: 142px;
+        margin-right: auto;
+
+        border: none;
+    }
 }
