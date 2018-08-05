@@ -12,10 +12,24 @@
         height: 2px;
 
         background-color: $black;
-        box-shadow: 0 6px 0 0 $black,
-        0 12px 0 0 $black;
+        box-shadow: 
+            0 6px 0 0 $black,
+            0 12px 0 0 $black;
 
         content: "";
+    }
+
+    &:hover::before,
+    &:focus::before {
+        box-shadow: 
+            0 6px 0 0 $black-hover,
+            0 12px 0 0 $black-hover;
+    }
+
+    &:active::before {
+        box-shadow: 
+            0 6px 0 0 $black-active,
+            0 12px 0 0 $black-active;
     }
 }
 
@@ -59,6 +73,22 @@
     background-color: transparent;
 
     cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover::before,
+    &:focus::before,
+    &:hover::after,
+    &:focus::after {
+        background-color: $black-hover;
+    }
+
+    &:active::before,
+    &:active::after {
+        background-color: $black-active;
+    }
 }
 
 .main-nav__list {

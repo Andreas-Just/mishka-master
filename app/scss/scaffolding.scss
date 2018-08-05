@@ -73,3 +73,55 @@ input[type="radio"].visually-hidden {
 .overlay--show {
     display: block;
 }
+
+.help {
+    position: absolute;
+    top: 27px;
+    left: -6px;
+    z-index: 5;
+
+    visibility: hidden;
+    margin-top: 8px;
+    padding: 3px 6px;
+
+    color: $green-form;
+
+    opacity: 0.3;
+
+    transition: all 0.5s;
+    pointer-events: none;
+
+    + .icon--phone {
+            color: #d18462;
+        }
+}
+
+.help-show {
+    top: 70px;
+
+    visibility: visible;
+
+    opacity: 0.8;
+
+    + .icon--phone {
+            color: $green-form;
+        }
+}
+
+@include media-breakpoint-up(md) {
+    .help {
+        top: -11px;
+        left: 161px;
+        font-size: 19px;
+    }
+
+    .help-show {
+        top: 40px;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .help {
+        left: 169px;
+    }
+}

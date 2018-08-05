@@ -84,6 +84,19 @@
     color: $green;
 }
 
+.icon--phone,
+.icon--email {
+    position: absolute;
+    right: 8px;
+    bottom: 17px;
+    color: rgba($black, 0.2);
+}
+
+.icon--email {
+    right: 4px;
+    bottom: 15px;
+}
+
 .icon--footer-instagram,
 .icon--footer-facebook,
 .icon--footer-twitter {
