@@ -11,7 +11,7 @@
 
 
 
-> **https://Andreas-Just.github.io/...**
+> **https://Andreas-Just.github.io/mishka-master/app/**
 
 
 ## Полезные ссылки
