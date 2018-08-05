@@ -11,8 +11,8 @@
 
     <!-- Template Basic Images Start -->
     <meta property="og:image" content="path/to/image.jpg">
-    <link rel="icon" href="favicon/favicon-2.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon-2-180x180.png">
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon-256x256.png">
     <!-- Template Basic Images End -->
 
     <!-- Custom Browsers Color Start -->
@@ -22,7 +22,13 @@
     <link rel="preload" href="fonts/OpenSansRegular/OpenSansRegular.woff2" as="font">
     <link rel="preload" href="fonts/OpenSansBold/OpenSansBold.woff2" as="font">
     <link href="css/style.min.css" rel="stylesheet">
-
+		
+		<!-- Picture element HTML5 shiv -->
+    <script>
+      document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async></script>
+    <!-- Picture element HTML5 shiv -->
 	</head>
 	<body>
 		<header class="page-header">
